@@ -1,13 +1,25 @@
-<h2>Product Details</h2>
-
-
 <div *ngIf="item">
-
- <h3>{{ item.name }}</h3>
-
- <h4>{{ item.price | currency:"EUR" }}</h4>
-
- <p>{{ item.description }}</p>
-
-
+    <div >
+        <h5 class="card-title title2 m-auto">{{item.name}}</h5>
+        <div class="card mb-3 ">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img class="w-75" id="resto" src="{{item.image}}">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+            
+            <p class="card-text paragraph">
+                {{item.description}}
+            </p>
+            <p class="card-text paragraph">PRICE : 
+                {{item.price | currency:"EUR"}}
+            </p>
+            <button (click)="addToCart()">Add to Cart</button>            
+            </div>
+          </div>
+        </div>
+      </div></div>
+    
 </div>
+    
