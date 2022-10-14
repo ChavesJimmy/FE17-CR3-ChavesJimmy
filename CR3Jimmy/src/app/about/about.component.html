@@ -1,1 +1,42 @@
-<p>about works!</p>
+<div >
+    <div class="card mb-3 ">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img id="resto" src="https://cdn.pixabay.com/photo/2019/02/21/19/00/restaurant-4011989__480.jpg" class="img-fluid rounded-start" alt="https://cdn.pixabay.com/photo/2019/02/21/19/00/restaurant-4011989__480.jpg">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+        <h2 class="card-title">Our place</h2>
+        <p class="card-text paragraph">
+            Address: 123 Italian Straße, Wien 1240. <br><br>
+            Tel: 01 234 56 789.
+        </p>
+        <h2 class="card-title">Our philosophy</h2>
+        <p class="card-text paragraph">
+            "Simply good"
+        </p>
+        <h2 class="card-title">Come and discover by yourself !<br> Book a table</h2>
+        <form id="booktable" [formGroup]="BookTable">
+            <label>
+                Name: <br>
+                <input type="text" formControlName="name">
+              </label><br>
+              <label>
+                How many people: <br>
+                <input type="text" formControlName="number">
+              </label><br>
+              <label>
+                Date: <br>
+                <input type="date" formControlName="date">
+              </label><br>
+              <label>
+                Hour: <br>
+                <input type="text" formControlName="hour">
+              </label><br>
+              <button (click)="bookTable()">Book</button>
+        </form>
+
+        </div>
+      </div>
+    </div>
+  </div></div>

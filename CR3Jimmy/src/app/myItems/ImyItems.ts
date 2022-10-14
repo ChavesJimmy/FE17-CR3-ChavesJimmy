@@ -3,5 +3,6 @@ export interface ImyItems {
     image: string,
     description: string,
     price: number,
-    availability: boolean
+    availability: boolean,
+    allergen:string,
 }

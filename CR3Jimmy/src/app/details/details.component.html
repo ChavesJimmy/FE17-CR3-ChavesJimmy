@@ -1,10 +1,10 @@
 <div *ngIf="item">
-    <div >
+    <div id="detail">
         <h5 class="card-title title2 m-auto">{{item.name}}</h5>
         <div class="card mb-3 ">
         <div class="row g-0">
           <div class="col-md-4">
-            <img class="w-75" id="resto" src="{{item.image}}">
+            <img class="w-100" id="resto" src="{{item.image}}">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -12,6 +12,9 @@
             <p class="card-text paragraph">
                 {{item.description}}
             </p>
+            <p class="card-text paragraph">Allergen:
+              {{item.allergen}}
+          </p>
             <p class="card-text paragraph">PRICE : 
                 {{item.price | currency:"EUR"}}
             </p>

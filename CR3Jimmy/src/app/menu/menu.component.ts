@@ -10,14 +10,21 @@ import { CartServiceService } from '../cart-service.service';
 })
 export class MenuComponent implements OnInit {
  myItems:Array<ImyItems> = myItems;
+ Index = 0;
  item: ImyItems = {} as ImyItems
   constructor(private cartService : CartServiceService) { }
   
-  addToCart(){
-    alert(`added to cart`)
-    this.cartService.addToCart(this.item)
+  addToCart(i:any){
+      alert("added to Cart")
+      this.cartService.addToCart(i);
+      console.log(i)
+    
+      //return this.cartService.addToCart(item[index])
 
-  }
+    };
+    //this.cartService.addToCart(this.item)
+
+
   ngOnInit( ): void {
   }
   

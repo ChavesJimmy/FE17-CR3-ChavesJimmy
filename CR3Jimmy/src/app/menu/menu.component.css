@@ -1,0 +1,28 @@
+.btn-primary{
+    color: greenyellow;
+}
+
+.btn-secondary{
+    background-color: greenyellow;
+    color: blue;
+}
+#btns { 
+    margin: auto;
+    padding: 20px;
+}
+.card{
+    border: solid 3px;
+    border-radius: 10px;
+    height: 30rem;
+    gap: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+img{
+    border-radius: 10px;
+    height: 12rem;
+    object-fit: cover;
+}
+.alert{
+    background-color: red;
+}

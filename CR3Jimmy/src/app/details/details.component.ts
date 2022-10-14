@@ -13,11 +13,14 @@ export class DetailsComponent implements OnInit {
   item : ImyItems = {} as ImyItems;
   Index = 0;
 
-  constructor(private route: ActivatedRoute, private cartService : CartServiceService) { }
+  constructor(
+    private route: ActivatedRoute, 
+    private cartService : CartServiceService) { }
 
   addToCart(){
     this.cartService.addToCart(this.item);
-    alert(`${this.item} added`)
+    console.log(this.item)
+    alert(`added to Cart`)
   }
   ngOnInit(): void {
     this.route.params.subscribe((params:Params) =>{

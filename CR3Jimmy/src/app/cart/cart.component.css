@@ -1,0 +1,36 @@
+#valid{
+    width: 75%;
+    border: solid 2px;
+    margin: auto;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(235, 230, 230);
+}
+button{
+    background-color: greenyellow;
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.totalBox{
+    background-color: gold;
+    border: solid 3px;
+    margin:auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    height: 15rem;
+}
+.card{
+padding: 5px;
+border: solid 3px;
+margin-bottom: 15px;
+margin-top: 15px;
+}
+
+img{
+    height: 100%;
+    object-fit: cover;
+}

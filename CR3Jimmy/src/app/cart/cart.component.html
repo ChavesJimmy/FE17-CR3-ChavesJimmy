@@ -1,11 +1,56 @@
 
-<h3>Cart</h3>
-
-
-<div class="cart-item" *ngFor="let item of items">
-
- <span>{{ item.name }} </span>
-
- <span>{{ item.price | currency:"EUR" }}</span>
-
+<div class="row">
+<div class="cart-item col-lg-8 col-md-7 col-sm-6" *ngFor="let item of items">
+    <div class="card mb-3 w-100">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="{{item.image}}" class="img-fluid rounded-start">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}} </h5>
+              <p class="card-text">{{item.description}}</p>
+              <p class="card-text">{{item.price | currency:"EUR"}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>
+<div class="card col-lg-4 col-md-5 col-sm-6 totalBox" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Price : {{total | currency:"EUR"}} </li>
+      <li class="list-group-item">Service (10%): {{total*0.1  | currency:"EUR"}} </li>
+      <ng-template [ngIf]="total > 40" [ngIfElse]="result">
+        <li class="list-group-item">Discount (15%) : {{total*0.15 | currency:"EUR"}}   </li>
+            <div class="card-footer">
+            Total (price + service - discount) :  {{total+(total*0.1)-(total*0.15) | currency:"EUR"}}  </div>
+      </ng-template>
+      <ng-template #result>
+        <li class="list-group-item">Discount : {{action | currency:"EUR"}}   </li>
+        <div class="card-footer">
+        Total (price + service) :  {{total+(total*0.1) | currency:"EUR"}}  </div>
+    </ng-template></ul>
+    </div>
+    <form id="valid" [formGroup]="validOrder" (ngSubmit)="onSubmit()">
+      <h1>Info for delivery</h1>
+      <div>
+        <label for="name">
+          Name:
+        </label><br>  
+        <input id="name" type="text" formControlName="name">     
+      </div>
+      <br>
+      <div>
+        <label for="address">
+          Address
+        </label><br>
+        <input id="address" type="text" formControlName="address">
+      </div><br>
+      <div>
+        <label for="address">
+          Phone:        
+        </label><br>
+        <input id="phone" type="text" formControlName="phone">
+      </div><br>
+      <button class="button" type="submit">Valid Order</button>
+     </form>

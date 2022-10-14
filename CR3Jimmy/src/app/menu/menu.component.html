@@ -1,5 +1,5 @@
 <div class="container row m-auto mt-4">
-    <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let item of myItems ; index as itemIndex">
+    <div class="col-sm-12 col-md-6 col-lg-4 super" *ngFor="let item of myItems ; index as itemIndex">
         <div class="card" style="width: 18rem;">
             <img src="{{item.image}}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -8,11 +8,11 @@
               <p>{{item.price | currency:"EUR"}}</p>
             </div>
             <ng-template [ngIf]="item.availability == true" [ngIfElse]="none">
-              <div>
+              <div id="btns">
                 <a routerLink="/items/{{itemIndex}}" class="btn btn-primary">Show details</a>
-                <a class="btn btn-secondary" (click)="addToCart()">Add to cart</a></div>
+                <a class="btn btn-secondary" (click)="addToCart(item)">Add to cart</a></div>
             </ng-template>
-            <ng-template #none>This item is not available</ng-template>
+            <ng-template #none> <p class="alert"> This item is not available</p></ng-template>
           </div>
     </div>
     
