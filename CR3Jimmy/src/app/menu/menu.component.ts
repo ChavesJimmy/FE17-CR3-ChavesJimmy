@@ -19,10 +19,7 @@ export class MenuComponent implements OnInit {
       this.cartService.addToCart(i);
       console.log(i)
     
-      //return this.cartService.addToCart(item[index])
-
     };
-    //this.cartService.addToCart(this.item)
 
 
   ngOnInit( ): void {
