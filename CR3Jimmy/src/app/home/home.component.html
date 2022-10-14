@@ -6,52 +6,65 @@
           <h5 id="titlehero" class="card-title">Il Mio Ristorante</h5>
           <p class="card-text"><small>The new italian experience</small></p>
           <div id="btn">
-            <a href="">our menu</a>
-            <a href="">book a table</a>
+            <a routerLink="/menu">our menu</a>
+            <a routerLink="...">book a table</a>
         </div>
         </div> 
       </div>
 </div>
 <!--restaurant/place section-->
-<div>
+<div >
     <h5 class="card-title title2 ">Il Mio Ristorante</h5>
-
-    <div class="card mb-3">
+    <div class="card mb-3 ">
     <div class="row g-0">
       <div class="col-md-4">
         <img id="resto" src="https://cdn.pixabay.com/photo/2019/02/21/19/00/restaurant-4011989__480.jpg" class="img-fluid rounded-start" alt="https://cdn.pixabay.com/photo/2019/02/21/19/00/restaurant-4011989__480.jpg">
       </div>
       <div class="col-md-8">
         <div class="card-body">
-        <h2>Our place</h2>
+        <h2 class="card-title">Our place</h2>
         <p class="card-text paragraph">
+            Address: 123 Italian Straße, Wien 1240. <br><br>
+            Tel: 01 234 56 789.
         </p>
         </div>
       </div>
     </div>
   </div></div>
 <!--why us section-->
-  <div class="w-100"><div class="card">
+  <div class="w-100"><div class="card bg-light">
     <div class="card-body">
       <h5 class="card-title">Why choose us</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Button</a>
+        <div id="choice">
+            <span>1. 
+                <br> Simply Good</span>
+            <span>2. <br> Better Price </span>
+            <span>3.  <br> Super Atmosphere</span>
+      </div>
+      
     </div>
   </div>
 <!--speciality sections-->
-  <div class="d-flex align-items-start">
-    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
-      <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
-      <button class="nav-link" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" disabled>Disabled</button>
-      <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
-      <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
+<div class="container">
+    <h3 class="card-title">Our specialities</h3>
+  <div class="d-flex ">
+    <div class="nav flex-column nav-pills me-3 w-50 menuPill" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <button class="nav-link active" id="v-pills-pizzaDG-tab" data-bs-toggle="pill" data-bs-target="#v-pills-pizzaDG" type="button" role="tab" aria-controls="v-pills-pizzaDG" aria-selected="true">pizza dello giardino</button>
+      <button class="nav-link" id="v-pills-pastaCP-tab" data-bs-toggle="pill" data-bs-target="#v-pills-pastaCP" type="button" role="tab" aria-controls="v-pills-pastaCP" aria-selected="false">pasta `caccio a peppe`,
+    </button>
+      <button class="nav-link" id="v-pills-tiramisu-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tiramisu" type="button" role="tab" aria-controls="v-pills-tiramisu" aria-selected="false">Tiramisu</button>
+     
     </div>
-    <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
-      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">...</div>
-      <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
-      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
-      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
+    <div class="tab-content displayPill" id="v-pills-tabContent">
+      <div class="w-100 tab-pane fade show active" id="v-pills-pizzaDG" role="tabpanel" aria-labelledby="v-pills-pizzaDG-tab" tabindex="0"><img class="w-100" src="https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062__480.jpg"><p class="pill-item">description: "pizza with fresh products of our garden",
+        price: 10,</p>
     </div>
-  </div>
+
+      <div class="tab-pane fade" id="v-pills-pastaCP" role="tabpanel" aria-labelledby="v-pills-pastaCP-tab" tabindex="0"><img class="w-100" src="https://media.istockphoto.com/photos/cacio-e-pepe-spaghetti-with-cheese-and-pepper-picture-id649525590?b=1&k=20&m=649525590&s=170667a&w=0&h=Ec4nHgQitXORTAos111Xt8Gb-PNUUI6XCXAoWlWdieA="><p class="pill-item">description: "pasta with a creamy sauce made with pecorino and fresh black pfeffer",
+        price: 9,</p></div>
+
+      <div class="tab-pane fade" id="v-pills-tiramisu" role="tabpanel" aria-labelledby="v-pills-tiramisu-tab" tabindex="0"><img class="w-100" src="https://cdn.pixabay.com/photo/2017/03/19/18/22/italian-food-2157246__480.jpg"><p class="pill-item">description: "dessert made from mascarpone, eggs, coffee, sugar, cacao, biscuits ",
+        price: 12,</p></div>
+    
+    </div>
+  </div></div>
