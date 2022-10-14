@@ -1,1 +1,13 @@
-<p>details works!</p>
+<h2>Product Details</h2>
+
+
+<div *ngIf="item">
+
+ <h3>{{ item.name }}</h3>
+
+ <h4>{{ item.price | currency:"EUR" }}</h4>
+
+ <p>{{ item.description }}</p>
+
+
+</div>

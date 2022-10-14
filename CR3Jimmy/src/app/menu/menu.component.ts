@@ -8,7 +8,7 @@ import { ImyItems } from '../myItems/ImyItems';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
- myItems:Array<ImyItems> = myItems
+ myItems:Array<ImyItems> = myItems;
   constructor() { }
 
   ngOnInit(): void {
